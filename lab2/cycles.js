@@ -1,22 +1,11 @@
-'use strict';
+'use strict'
 
-function range(start, end) {
-    let list = [];
-    for (let i = start; i <= end; i++) {
-        list.push(i);
+const range = (min, max) => {
+    let key = []
+    for (min; min <= max; min++) {
+        key.push(min)
     }
-    return list;
-};
-
-function rangeOdd(start, end) {
-    let list = [];
-    for (let i = start; i <= end; i++) {
-        if (i % 2 != 0) {
-            list.push(i);
-        }
-    }
-    return list;
+    return key
 }
 
-console.log(range(15, 30))
-console.log(rangeOdd(15, 30))
+console.dir(range(20, 100))

@@ -2,8 +2,8 @@
 
 const obj = { n: 5 };
 
-export function inc(obj) {
-    obj.n++;
+export function inc(arg) {
+    arg.n++;
 }
 
 inc(obj)

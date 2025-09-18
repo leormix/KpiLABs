@@ -1,24 +1,17 @@
 'use strict';
 
-const phoneBook = [
-    { name: 'Marcus Aurelius', phone: '+380445554433' },
-    { name: "Yuliy Cesar", phone: "+380267502618" },
-    { name: "Napoleon Bonapart", phone: "+3808764576" },
-    { name: "Stepan Bandera", phone: "+38025252452" },
-];
+const phoneNumbers = [
+    { name: "Stepan Bandera", phone: "+123123123123" },
+    { name: "Napoleon Bonapart", phone: "+3802363681" },
+    { name: "Yullia Timoshenko", phone: "+3811121287" }
+]
 
-function findPhoneByNumber(name) {
-    for (let i = 0; i < phoneBook.length; i++) {
-        if (phoneBook[i].name === name) {
-            return phoneBook[i].phone;
-        }
+const findPhoneByName = (name) => {
+    for (const obj of phoneNumbers) {
+        if (obj.name === name) return obj.phone;
+    };
+};
 
-    }
-
-    return 0;
-}
-console.dir(findPhoneByNumber("Stepan Bandera"))
-console.dir(findPhoneByNumber('Marcus Aurelius'))
-console.dir(findPhoneByNumber("Napoleon Bonapart"))
-console.dir(findPhoneByNumber("Yuliy Cesar"))
-console.dir(findPhoneByNumber("Tuganskih Oleksandr"))
+console.dir(findPhoneByName("Stepan Bandera"))
+console.dir(findPhoneByName("Napoleon Bonapart"))
+console.dir(findPhoneByName("Yullia Timoshenko"))

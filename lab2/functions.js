@@ -1,29 +1,22 @@
-'use strict';
+'use strict'
 
-function average(a, b) {
-    return (a + b) / 2;
-};
+const average = (a, b) => (a + b) / 2;
 
-function square(x) {
-    return x ** 2;
-};
+const square = (x) => x ** 2
 
-function cube(x) {
-    return x * x * x;
-}
+const cube = (x) => x ** 3
 
-function calculate() {
-    let list = [];
+const calculate = () => {
+    const array = []
     for (let i = 0; i <= 9; i++) {
-        const sqr = square(i);
-        const cub = cube(i);
-        const avrg = average(sqr, cub);
-        list.push(avrg);
+        const x = average(cube(i), square(i))
+        array.push(x)
     }
-    return list;
+    return array;
 };
 
-console.dir(average(2, 6))
-console.dir(square(7))
-console.dir(cube(8))
+console.dir(average(3, 7))
+console.dir(square(2))
+console.dir(cube(2))
+
 console.dir(calculate())
